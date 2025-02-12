@@ -1,15 +1,49 @@
 import { Tabs } from "expo-router";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function TabsLayout() {
   return (
-    <Tabs>
-      <Tabs.Screen name="index" options={{ 
-        headerTitle: "Sticker Smash", 
-        headerLeft: ()=><></>,// to remove the left arrow if we navigate to this route
-      }} />
-      <Tabs.Screen name="about" options={{ headerTitle: "About" }} />
-      {/* add this route here just to remove the header of page, you can comment it and not found page still work */}
-      <Tabs.Screen name="+not-found" options={{ headerShown: false }} />
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: "#fff",//color of the active tab
+        headerStyle: {//the header of page
+          backgroundColor: "gray",
+        },
+        headerShadowVisible: false,//remove under line of the header
+        headerTintColor: "#eee",//color of header of page
+        tabBarStyle: {
+          backgroundColor: "#25292e",
+        },
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons
+              name={focused ? "home-sharp" : "home-outline"}
+              color={color}
+              size={24}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="about"
+        options={{
+          title: "About",
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons
+              name={
+                focused ? "information-circle" : "information-circle-outline"
+              }
+              color={color}
+              size={24}
+            />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

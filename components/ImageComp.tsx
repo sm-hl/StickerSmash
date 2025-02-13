@@ -12,7 +12,7 @@ export default function ImageComp({imgSource}:Props) {
 const styles = StyleSheet.create({
   image:{
     width: 320,
-    height: 300,
+    height: 440,
     borderRadius: 18,
   }
 });

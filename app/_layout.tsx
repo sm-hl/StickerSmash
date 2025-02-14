@@ -1,12 +1,13 @@
 import { Stack } from "expo-router";
 import { LogBox } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 LogBox.ignoreAllLogs(true); //ignore logs showen in app
 
 export default function RootLayout() {
   return (
-    <>
+    <GestureHandlerRootView style={{flex:1}}>
       <StatusBar style="light" />
       <Stack>
         <Stack.Screen
@@ -17,6 +18,6 @@ export default function RootLayout() {
         />
         <Stack.Screen name="+not-found" options={{ headerShown: false }} />
       </Stack>
-    </>
+    </GestureHandlerRootView>
   );
 }

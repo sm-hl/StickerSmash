@@ -51,4 +51,4 @@ Join our community of developers creating universal apps.
 
 ## Screenshots of app
 
-[app](./assets/images/screen1.jpg)
+![app](./assets/images/screen1.jpg)

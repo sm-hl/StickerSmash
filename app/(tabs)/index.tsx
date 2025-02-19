@@ -136,7 +136,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   imageContainer: {
-    // flex: 1,
+    flex: 1,
+    marginTop: 12,
   },
   footerContainer: {
     flex: 1 / 3,
